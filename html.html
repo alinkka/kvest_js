@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+	<div class="dveri"> <!--doors-->
+		<div class="container row p-5 col-12">
+			<div class="col-4">
+				<img  class="w-75 otvet" src="door.png" >
+			</div>
+			<div class="col-4">
+				<img class="w-50 otvet2"  src="door2.png" >
+			</div>
+			<div class="col-4">
+				<img class="w-50 otvet3" src="door3.png">
+			</div>
+		</div>
+	</div>
+	<div class="col-12 hogwards text-white text-center" style="display: none; background-image: url(bg.jpg); background-size: 100% 100%;height: 1000px"> <!--first_location-->
+		<h2>помоги поттеру найти его метлу, плащ и палочку! 
+		нужно заработать 3 очка</h2>
+		<h2 class="o4ki">0</h2>
+		<div class="col-12">
+			<button class="btn-success btn exit">уйти</button>
+		</div>
+		<div class="col-12 row">
+			<div class="col-3">
+				<div style="height: 680px">
+					
+				</div>
+				<div class="">
+					<img src="gun.png" class="w-25 kalashikov" style="position: absolute; margin-left: 100px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 6px">
+					
+				</div>
+				<div class="col-4">
+					<img src="metla.png" class="w-100 metla" style="position: absolute; margin-left: 15px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 800px">
+				</div>
+				<div class="col-4">
+					<img src="palochka.png" class="w-100 palka" style="position: absolute; margin-left: 5px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 800px">
+					
+				</div>
+				<div class="col-4">
+					<img src="ring.png" class="w-100 ring" style="position: absolute; margin-left: 50px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 800px">
+					
+				</div>
+				<div class="col-4">
+					<img src="mantiya.png" class="w-100 plash" style="position: absolute; margin-left: 10px">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 city text-black text-center" style="display: none; background-image: url(bg2.jpg); background-size: 100% 100%;height: 1000px"> <!--second location-->
+		<h2>найди 3 вещи piter</h2>
+		<h2 class="ball">0</h2>
+		<div class="col-12">
+			<button class="btn-success btn2 exit2">уйти</button>
+		</div>
+			<div class="col-12 row">
+			<div class="col-3">
+				<div style="height: 680px">
+					
+				</div>
+				<div>
+					<img src="shava.png" class="w-25 shava" style="position: absolute; margin-left: 10px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 6px">
+					
+				</div>
+				<div class="col-4">
+					<img src="grecha.png" class="w-100 grecha" style="position: absolute; margin-left: 80px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 800px">
+				</div>
+				<div class="col-4">
+					<img src="zont.png" class="w-100 zont" style="position: absolute; margin-left: 35px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 800px">
+					
+				</div>
+				<div class="col-4">
+					<img src="bottle.png" class="w-100 bottle" style="position: absolute; margin-left: 20px;">
+				</div>
+			</div>
+			<div class="col-2">
+				<div style="height: 800px">
+					
+				</div>
+				<div class="col-4">
+					<img src="mantiya.png" class="w-100 plash" style="position: absolute; margin-left: 100px">
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<script type="text/javascript">
+		//score
+		let score = 0; 
+		//dveri
+		document.querySelector(".otvet").onclick = function(){
+			alert("оупен")
+			document.querySelector(".hogwards").style.display = "block"				
+			document.querySelector(".dveri").style.display = "none"
+		}
+		document.querySelector(".otvet2").onclick = function(){
+			alert("клоус")
+			document.querySelector(".city").style.display = "block"				
+			document.querySelector(".dveri").style.display = "none"
+		}
+		document.querySelector(".otvet3").onclick = function(){
+			alert("клоус")
+		}
+		//firs_location
+		document.querySelector(".btn").onclick = function(){
+			alert("go awaY")
+			document.querySelector(".dveri").style.display = "block"				
+			document.querySelector(".hogwards").style.display = "none"
+		}
+		//objects1
+		document.querySelector(".plash").onclick = function(){
+			document.querySelector(".plash").style.display ="none"
+			score = score+1;
+			document.querySelector(".o4ki").innerHTML = score;
+			alert("ты пуся плюс один")
+		}
+		document.querySelector(".palka").onclick = function(){
+			document.querySelector(".palka").style.display ="none"
+			score = score+1;
+			document.querySelector(".o4ki").innerHTML = score;
+			alert("глаз орла жесс +1")
+		}
+		document.querySelector(".metla").onclick = function(){
+			document.querySelector(".metla").style.display ="none"
+			score = score+1;
+			document.querySelector(".o4ki").innerHTML = score;
+			alert("цьмок +1")
+		}
+		//second_location
+		document.querySelector(".btn2").onclick = function(){
+			alert("go awaY")
+			document.querySelector(".dveri").style.display = "block"				
+			document.querySelector(".city").style.display = "none"
+		}
+		//objects2
+		document.querySelector(".shava").onclick = function(){
+			document.querySelector(".shava").style.display ="none"
+			score = score+1;
+			document.querySelector(".ball").innerHTML = score;
+			alert("ты пуся плюс один")
+		}
+		document.querySelector(".grecha").onclick = function(){
+			document.querySelector(".grecha").style.display ="none"
+			score = score+1;
+			document.querySelector(".ball").innerHTML = score;
+			alert("глаз орла жесс +1")
+		}
+		document.querySelector(".zont").onclick = function(){
+			document.querySelector(".zont").style.display ="none"
+			score = score+1;
+			document.querySelector(".ball").innerHTML = score;
+			alert("цьмок +1")
+		}
+	</script>
+	</div>
+</body>
+</html>
